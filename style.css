@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* PAGE */
+.page {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* BACKGROUND */
+.bg-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.kolom-1 {
+  /* Gradasi dari abu-abu terang ke sedikit lebih gelap */
+  background: linear-gradient(to right, #ffffff, #e8e8e8);
+}
+
+.kolom-2 {
+  /* Memulai dari warna agak gelap agar kontras dengan kolom 1, lalu sedikit memudar */
+  background: linear-gradient(to right, #dedede, #f0f0f0);
+}
+
+.kolom-3 {
+  /* Mengulangi pola kolom 1 */
+  background: linear-gradient(to right, #ffffff, #e8e8e8);
+}
+
+.kolom-4 {
+  /* Mengulangi pola kolom 2 */
+  background: linear-gradient(to right, #dedede, #f0f0f0);
+}
+
+/* MAIN */
+.main-konten {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* PORTFOLIO TEXT */
+.portfolio-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+  font-size: 13rem;
+  font-weight: bold;
+  line-height: 0.85;
+}
+
+.text-porto {
+  color: #232323;
+  position: relative;
+  left: -140px;
+}
+
+.text-folio-container {
+  position: relative;
+  display: inline-block;
+}
+
+.text-folio {
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.box-pink {
+  position: absolute;
+  background: #f7bad8;
+  width: 115%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  transform: skewX(-10deg);
+  z-index: 1;
+}
+
+/* FOTO */
+.foto1 {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  z-index: 3;
+  pointer-events: none;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
+
+/* BUTTON BASE (tetap 3D kamu) */
+.badge-btn {
+  position: absolute;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 18px;
+  text-transform: uppercase;
+  z-index: 10;
+  height: 50px;
+  width: 250px;
+  box-shadow:
+    inset 0 2px 3px rgba(255, 255, 255, 0.4),
+    inset 0 -3px 5px rgba(251, 250, 250, 0.25),
+    0 6px 12px rgba(14, 13, 13, 0.2);
+}
+
+.btn-green {
+  background: linear-gradient(#458d34, #295b1e);
+}
+
+.btn-silver {
+  background: linear-gradient(#b8b8b8, #858585);
+}
+
+/* PAGE 1 POSISI BUTTON */
+.bidang-1 {
+  top: 25%;
+  left: 5%;
+}
+.bidang-2 {
+  top: 60%;
+  left: 5%;
+}
+.bidang-3 {
+  bottom: 10%;
+  left: 2%;
+}
+.bidang-4 {
+  top: 10%;
+  right: 4%;
+}
+.bidang-5 {
+  bottom: 12%;
+  right: 4%;
+}
+
+/* PAGE 2 TITLE */
+.page2-title-container {
+  text-align: left;
+  margin: 50px;
+  margin-top: 10%;
+}
+
+.page2-text {
+  font-size: 4rem;
+}
+
+.pink {
+  background: #f7bad8;
+}
+
+.page2-buttons {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  gap: 45%;
+  justify-content: center;
+  align-content: center;
+  margin-top: 10%;
+  text-align: center;
+}
+.page2-buttons a {
+  text-decoration: none;
+}
+
+/* override absolute biar page 2 rapi */
+.page2-buttons .badge-btn {
+  position: relative;
+}
+.page2-buttons :hover {
+  transform: translateY(-6px) scale(1.06);
+  filter: brightness(1.08);
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.35s ease;
+  will-change: transform;
+}
+/* HEADER ATAS (Nama & Portofolio) */
+.header-nav {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  z-index: 10;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.brand-name,
+.menu-title {
+  color: #232323;
+}
+
+/* LAYOUT CONTAINER */
+.container-about {
+  display: flex;
+  align-items: flex-end; /* Membuat foto menempel ke bawah layar */
+  justify-content: space-between;
+  padding: 0 5% 0 2%;
+  width: 100%;
+  height: 100%;
+}
+
+/* BAGIAN FOTO (KIRI) */
+.foto-wrapper {
+  width: auto;
+  max-width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  z-index: 3;
+}
+
+.foto-me {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  /* Efek drop shadow putih tebal di pinggir foto (efek stiker/cutout) */
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 1))
+    drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.8));
+}
+
+/* BAGIAN INFO & TEKS (KANAN) */
+.info-wrapper {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Menaruh teks tepat di tengah vertikal */
+  padding-bottom: 5%;
+}
+
+/* JUDUL "ABOUT ME" */
+.page3-text {
+  font-size: 5rem; /* Ukuran besar sesuai mockup */
+  font-weight: 900;
+  color: #232323;
+  line-height: 1;
+  margin-bottom: 50px;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+/* KOTAK PINK DESKRIPSI */
+.box-pink-desc {
+  background-color: #f7bad8;
+  padding: 35px;
+  border-radius: 0px; /* Sesuai gambar, bentuknya kotak tajam */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  bottom: -5px;
+}
+
+.desc-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 25px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.edu-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #000000;
+  font-weight: 500;
+}
+.foto2 {
+  width: 500;
+  height: auto;
+  object-fit: contain;
+  /* Efek drop shadow putih tebal di pinggir foto (efek stiker/cutout) */
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 1))
+    drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.8));
+}
+.page3-text {
+  font-size: 5rem;
+  color: #232323;
+  line-height: 1;
+  margin-bottom: 50px;
+  letter-spacing: -2px;
+  margin-top: 9%;
+}
