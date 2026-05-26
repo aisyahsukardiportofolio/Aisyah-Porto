@@ -16,6 +16,7 @@ body {
 /* PAGE */
 .page {
   height: 100vh;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -32,22 +33,18 @@ body {
 }
 
 .kolom-1 {
-  /* Gradasi dari abu-abu terang ke sedikit lebih gelap */
   background: linear-gradient(to right, #ffffff, #e8e8e8);
 }
 
 .kolom-2 {
-  /* Memulai dari warna agak gelap agar kontras dengan kolom 1, lalu sedikit memudar */
   background: linear-gradient(to right, #dedede, #f0f0f0);
 }
 
 .kolom-3 {
-  /* Mengulangi pola kolom 1 */
   background: linear-gradient(to right, #ffffff, #e8e8e8);
 }
 
 .kolom-4 {
-  /* Mengulangi pola kolom 2 */
   background: linear-gradient(to right, #dedede, #f0f0f0);
 }
 
@@ -59,7 +56,7 @@ body {
   z-index: 2;
 }
 
-/* PORTFOLIO TEXT */
+/* PAGE 1 */
 .portfolio-wrapper {
   position: absolute;
   top: 50%;
@@ -110,7 +107,7 @@ body {
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
 }
 
-/* BUTTON BASE (tetap 3D kamu) */
+/* BUTTON */
 .badge-btn {
   position: absolute;
   border: none;
@@ -137,33 +134,37 @@ body {
   background: linear-gradient(#b8b8b8, #858585);
 }
 
-/* PAGE 1 POSISI BUTTON */
+/* POSISI BUTTON PAGE 1 */
 .bidang-1 {
   top: 25%;
   left: 5%;
 }
+
 .bidang-2 {
   top: 60%;
   left: 5%;
 }
+
 .bidang-3 {
   bottom: 10%;
   left: 2%;
 }
+
 .bidang-4 {
   top: 10%;
   right: 4%;
 }
+
 .bidang-5 {
   bottom: 12%;
   right: 4%;
 }
 
-/* PAGE 2 TITLE */
+/* PAGE 2 */
 .page2-title-container {
   text-align: left;
   margin: 50px;
-  margin-top: 10%;
+  margin-top: 0%;
 }
 
 .page2-text {
@@ -185,14 +186,15 @@ body {
   margin-top: 10%;
   text-align: center;
 }
+
 .page2-buttons a {
   text-decoration: none;
 }
 
-/* override absolute biar page 2 rapi */
 .page2-buttons .badge-btn {
   position: relative;
 }
+
 .page2-buttons :hover {
   transform: translateY(-6px) scale(1.06);
   filter: brightness(1.08);
@@ -202,7 +204,8 @@ body {
     filter 0.35s ease;
   will-change: transform;
 }
-/* HEADER ATAS (Nama & Portofolio) */
+
+/* HEADER */
 .header-nav {
   position: absolute;
   top: 40px;
@@ -213,25 +216,24 @@ body {
   padding: 0 5%;
   z-index: 10;
   font-weight: bold;
-  font-size: 1rem;
   letter-spacing: 1px;
 }
+
 .brand-name,
 .menu-title {
   color: #232323;
 }
 
-/* LAYOUT CONTAINER */
+/* ABOUT */
 .container-about {
   display: flex;
-  align-items: flex-end; /* Membuat foto menempel ke bawah layar */
+  align-items: flex-end;
   justify-content: space-between;
   padding: 0 5% 0 2%;
   width: 100%;
   height: 100%;
 }
 
-/* BAGIAN FOTO (KIRI) */
 .foto-wrapper {
   width: auto;
   max-width: 45%;
@@ -242,41 +244,37 @@ body {
   z-index: 3;
 }
 
-.foto-me {
-  max-height: 100%;
-  width: auto;
+.foto2 {
+  width: 500px;
+  height: auto;
   object-fit: contain;
-  /* Efek drop shadow putih tebal di pinggir foto (efek stiker/cutout) */
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 1))
     drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.8));
 }
 
-/* BAGIAN INFO & TEKS (KANAN) */
 .info-wrapper {
   width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Menaruh teks tepat di tengah vertikal */
+  justify-content: center;
   padding-bottom: 5%;
 }
 
-/* JUDUL "ABOUT ME" */
 .page3-text {
-  font-size: 5rem; /* Ukuran besar sesuai mockup */
+  font-size: 5rem;
   font-weight: 900;
   color: #232323;
   line-height: 1;
   margin-bottom: 50px;
   letter-spacing: -2px;
   text-align: center;
+  margin-top: 0%;
 }
 
-/* KOTAK PINK DESKRIPSI */
 .box-pink-desc {
   background-color: #f7bad8;
   padding: 35px;
-  border-radius: 0px; /* Sesuai gambar, bentuknya kotak tajam */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   bottom: -5px;
 }
@@ -296,98 +294,18 @@ body {
   color: #000000;
   font-weight: 500;
 }
-.foto2 {
-  width: 500;
-  height: auto;
-  object-fit: contain;
-  /* Efek drop shadow putih tebal di pinggir foto (efek stiker/cutout) */
-  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 1))
-    drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.8));
-}
-.page3-text {
-  font-size: 5rem;
-  color: #232323;
-  line-height: 1;
-  margin-bottom: 50px;
-  letter-spacing: -2px;
-  margin-top: 9%;
-}
-/* page3 */
-/* --- RESET / COMMON --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-}
-
-.page {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-/* --- BACKGROUND KOLOM (Updated with Gradient) --- */
-.bg-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-
-/* Gradasi lembut seperti gambar sebelumnya */
-.kolom-1 {
-  background: linear-gradient(to right, #fcfcfc, #ececec);
-}
-.kolom-2 {
-  background: linear-gradient(to right, #fcfcfc, #ececec);
-}
-.kolom-3 {
-  background: linear-gradient(to right, #fcfcfc, #ececec);
-}
-.kolom-4 {
-  background: linear-gradient(to right, #fcfcfc, #ececec);
-}
-
-/* --- HEADER --- */
-.header-nav {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 5%;
-  z-index: 10;
-  font-weight: bold;
-}
-.brand-name,
-.menu-title {
-  color: #232323;
-  letter-spacing: 1px;
-}
-
-/* page 3 */
-/* --- SKILL TOOLS CONTENT LAYOUT --- */
+/* SKILL TOOLS */
 .skill-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Judul di tengah, logo di bawah */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 10% 5% 5% 5%; /* Menjaga jarak dari atas dan bawah */
+  padding: 10% 5% 5% 5%;
 }
 
-/* JUDUL BESAR */
 .skill-title-wrapper {
   display: flex;
   flex-direction: column;
@@ -398,23 +316,23 @@ body {
 .skill-word {
   position: relative;
   display: inline-block;
-  margin-bottom: 20px; /* Jarak antara SKILL dan TOOLS */
+  margin-bottom: 20px;
   transform: translateX(-130px);
 }
 
 .box-pink-skill {
   position: absolute;
   background: #ff94c9;
-  width: 110%; /* Lebih lebar dari teks */
-  height: 110%; /* Lebih tinggi dari teks */
+  width: 110%;
+  height: 110%;
   top: -5%;
   left: -5%;
-  transform: skewX(-5deg); /* Sedikit miring */
-  z-index: -1; /* Di belakang teks */
+  transform: skewX(-5deg);
+  z-index: -1;
 }
 
 .skill-title-wrapper h1 {
-  font-size: 8rem; /* Ukuran sangat besar sesuai desain */
+  font-size: 8rem;
   font-weight: 900;
   color: #232323;
   line-height: 1;
@@ -422,18 +340,16 @@ body {
   text-align: center;
 }
 
-/* --- BARISAN LOGO --- */
 .skill-tools-bar {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 35px; /* Jarak antar logo */
+  gap: 35px;
   width: 100%;
   z-index: 3;
-  margin-top: auto; /* Memastikan logo di paling bawah */
+  margin-top: auto;
 }
 
-/* ITEM LOGO CONTAINER */
 .tool-item {
   position: relative;
   display: flex;
@@ -442,49 +358,45 @@ body {
   justify-content: flex-end;
 }
 
-/* LOGO GAMBAR (Asli) */
 .tool-logo {
-  max-width: 90px; /* Sesuaikan ukuran logo */
+  max-width: 90px;
   max-height: 90px;
   width: auto;
   height: auto;
-  border-radius: 20px; /* Sudut membulat */
+  border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background: white; /* Opsional: jika gambar ada yang transparan */
-  padding: 10px; /* Opsional: ruang di dalam logo */
+  background: white;
+  padding: 10px;
   object-fit: contain;
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease; /* Untuk hover */
+    box-shadow 0.3s ease;
 }
 
-/* TITIK DI ATAS LOGO */
 .dot-top {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #a9a9a9; /* Warna abu-abu dot */
-  margin-bottom: 10px; /* Jarak dot ke logo */
+  background: #a9a9a9;
+  margin-bottom: 10px;
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* KHUSUS LOGO AI (Lebih Besar) */
 .ai-logo {
   max-width: 120px;
   max-height: 120px;
 }
 
-/* LABEL "OFTEN & ADVANCE" */
 .advance-tool {
   position: relative;
 }
 
 .label-advance {
   position: absolute;
-  top: 20px; /* Di atas dot */
+  top: 20px;
   left: 50%;
   transform: translateX(-50%) skewX(-10deg);
-  background: #458d34; /* Warna hijau */
+  background: #458d34;
   color: white;
   padding: 5px 15px;
   font-size: 0.7rem;
@@ -495,18 +407,25 @@ body {
   z-index: 5;
 }
 
-/* --- HOVER EFFECT (Saat Gambar Diklik atau Di-hover) --- */
-/* Karena kita tidak pakai <button>, efek hover akan diaplikasikan ke .tool-logo */
-
 .tool-logo:hover {
-  transform: translateY(-8px) scale(1.1); /* Zoom in dan sedikit ke atas */
+  transform: translateY(-8px) scale(1.1);
   box-shadow:
     0 10px 20px rgba(0, 0, 0, 0.2),
-    /* Shadow luar lebih kuat */ 0 0 15px rgba(255, 255, 255, 0.6); /* Sedikit glow putih */
+    0 0 15px rgba(255, 255, 255, 0.6);
 }
 
-/* Untuk Efek Tekan/Klik (Opsional) */
 .tool-logo:active {
-  transform: translateY(-4px) scale(1.05); /* Sedikit kembali ke bawah */
+  transform: translateY(-4px) scale(1.05);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.experience-text {
+  display: flex;
+  text-align: justify;
+  gap: 40px;
+  padding:  40px;
+  margin-top: -20px;
+  padding-top: 0;
+}
+.experience-desc {
+  flex: 1;
 }
