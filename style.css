@@ -174,16 +174,14 @@ body {
 .pink {
   background: #f7bad8;
 }
-
 .page2-buttons {
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(3, auto);
-  gap: 45%;
+  grid-template-columns: repeat(2, 250px); /* Tentukan lebar kolom agar konsisten */
+  gap: 25px 50px; /* Jarak vertikal 25px, horizontal 50px */
   justify-content: center;
   align-content: center;
-  margin-top: 10%;
+  margin-top: 5%; /* Dikurangi sedikit agar tidak terlalu turun */
   text-align: center;
 }
 
@@ -193,35 +191,23 @@ body {
 
 .page2-buttons .badge-btn {
   position: relative;
+  /* Hapus background default di sini jika ada */
 }
 
-.page2-buttons :hover {
-  transform: translateY(-6px) scale(1.06);
-  filter: brightness(1.08);
-  transition:
-    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
-    box-shadow 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
-    filter 0.35s ease;
-  will-change: transform;
+/* ======================================================== */
+/* LOGIKA SELANG-SELING (Warna Tombol Page 2)              */
+/* ======================================================== */
+
+/* Tombol urutan GANJIL (1, 3, 5) -> Warna Silver/Abu-abu */
+.page2-buttons a:nth-child(odd) .badge-btn,
+.page2-buttons .badge-btn:nth-child(odd) {
+  background: linear-gradient(#b8b8b8, #858585);
 }
 
-/* HEADER */
-.header-nav {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 5%;
-  z-index: 10;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.brand-name,
-.menu-title {
-  color: #232323;
+/* Tombol urutan GENAP (2, 4, 6) -> Warna Hijau */
+.page2-buttons a:nth-child(even) .badge-btn,
+.page2-buttons .badge-btn:nth-child(even) {
+  background: linear-gradient(#458d34, #295b1e);
 }
 
 /* ABOUT */
