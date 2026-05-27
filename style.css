@@ -451,17 +451,53 @@ body {
 
 /* page6 */
 .page6-title-container{
-  background-image: url('image/page5.jpeg');
   width: 100%;
   height: 110vh;
 
-  background-size: cover;      /* gambar tampil utuh */
-  background-repeat: no-repeat;  /* tidak mengulang */
-  background-position: center;   /* posisi tengah */
+  background-image: url('image/page5.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+
+  align-items: start;
+  position: relative;
+  padding-top: 40px; /* kasih jarak dari atas */
+  padding-left: 50px;
+  padding-right: 50px;
   margin-top: -3%;
+  position: relative;
+  z-index: 2;
 }
+.header--left h2, 
+.header--right h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  color: white;
+}
+.header--center h1{
+  margin: 0;
+  text-align: center;
+  color:white;
+  margin-top: 20px;
+}
+.page6-description {
+  position: relative;
+  z-index: 10;
 
+  width: 200%;        /* PENTING */
+  padding-left: 10px;
+  padding-right: 50px;
 
+  text-align: justify;
+  color: white;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
 /* page7 */
 
 
@@ -577,4 +613,250 @@ body {
 
 .project-link:hover {
   color: #f7bad8;
+}
+
+/* Tambahkan rule baru ini di CSS kamu */
+.page-auto {
+  height: 80% !important;     /* Mematikan fungsi height 100vh bawaan */
+  
+  min-height: 100vh;           /* Minimal tingginya tetap seukuran layar */
+  overflow: visible !important; /* Mengizinkan halaman memanjang ke bawah jika gambar besar */
+  padding-bottom: 50px;        /* Jarak napas di bagian paling bawah halaman */
+}
+
+/* Update class gambar menjadi seperti ini */
+/* Container utama halaman dikunci 100vh */
+.page-portfolio-kimo {
+  height: 100vh !important;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pembungkus konten menggunakan Flexbox vertikal */
+.main-konten-kimo {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px 20px 20px; /* Padding atas untuk jarak judul */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Memastikan judul punya space yang pas dan tidak tergeser */
+.main-konten-kimo .page7-title-container {
+  flex-shrink: 0; /* Judul tidak boleh mengecil atau tertekan */
+  margin-bottom: 20px;
+}
+
+/* Pembungkus gambar mengambil seluruh sisa layar di bawah judul */
+.kimo-image-wrapper {
+  flex-grow: 1; /* Ambil sisa ruang vertikal yang kosong */
+  width: 100%;
+  display: flex;
+  align-items: center;    /* Gambar otomatis di tengah secara vertikal */
+  justify-content: center; /* Gambar otomatis di tengah secara horizontal */
+  overflow: hidden;
+}
+
+/* Aturan sakti agar gambar melebar maksimal tanpa terpotong kanan-kiri */
+.kimo-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Kunci rahasia: gambar membesar maksimal, tapi anti kepotong */
+  display: block;
+}
+
+/* page9 */
+.bgpage9 {
+  background-image: url('image/kimo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 75vh; /* Mengisi sisa ruang halaman di bawah judul */
+  position: relative;
+  z-index: 2;
+  /* Hapus margin minus yang bisa bikin layout bergeser/bocor */
+  margin: 0; 
+  margin-top: -45px;
+}
+
+/* page10 */
+.bgpage10-container {
+  background-image: url('image/page10.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Kunci posisi agar memenuhi satu halaman penuh tanpa celah */
+  position: absolute;
+  inset: 0; 
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Di belakang konten utama */
+
+  /* HAPUS SEMUA MARGIN MINUS DAN JEDA YANG BIKIN BOCOR */
+  margin: 0 !important; 
+}
+
+/* Pastikan section pasangannya bersih dari luapan */
+.page {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Mencegah gambar meluber ke halaman lain */
+}
+
+/* CONTAINER UTAMA */
+#CONTACT-ME {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+}
+
+/* HEADER TEKS KECIL DI ATAS */
+.contact-header-top {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #232323;
+  letter-spacing: 1px;
+}
+
+/* LAYOUT DUA KOLOM (FOTO & KONTEN) */
+.contact-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end; /* Memastikan foto nempel ke bawah layar */
+  justify-content: space-between;
+}
+
+/* SISI KIRI (FOTO) */
+.contact-left {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  z-index: 2;
+}
+
+.foto-contact {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: -170px;
+}
+
+/* SISI KANAN (JUDUL & BADGE) */
+.contact-right {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5%;
+  z-index: 3;
+}
+
+/* DESIGN JUDUL CONTACT ME */
+.contact-title-box {
+  margin-bottom: 40px;
+}
+
+.text-contact {
+  font-size: 6.5rem;
+  font-weight: 900;
+  color: #232323;
+  line-height: 1;
+  margin: 0;
+}
+
+.highlight-pink-bg {
+  background-color: #f7bad8;
+  padding: 0 15px;
+  display: inline-block;
+}
+
+.text-me-box {
+  border: 3px dashed #458d34;
+  padding: 5px 25px;
+  display: inline-block;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* Efek kotak penarik (dot hijau kecil) di sudut border dashed */
+.text-me-box::before, .text-me-box::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #458d34;
+}
+.text-me-box::before { top: -6px; left: -6px; }
+.text-me-box::after { bottom: -6px; right: -6px; }
+
+.text-me {
+  font-size: 6.5rem;
+  font-weight: 900;
+  color: #232323;
+  line-height: 0.9;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* KAPSUL TOMBOL HIJAU */
+.contact-buttons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+  max-width: 600px;
+}
+
+.btn-green-contact {
+  position: relative !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  
+  width: auto !important; /* Biar panjang kapsul fleksibel ngikutin isi teks */
+  min-width: 180px;
+  height: 48px !important;
+  padding: 0 25px !important;
+  border-radius: 50px !important;
+  
+  background: linear-gradient(#458d34, #295b1e) !important;
+  color: white !important;
+  font-size: 0.85rem !important;
+  font-weight: bold;
+  text-transform: lowercase; /* Sesuai dengan desain email & IG yang menggunakan huruf kecil */
+  
+  box-shadow:
+    inset 0 2px 3px rgba(255, 255, 255, 0.4),
+    inset 0 -3px 5px rgba(251, 250, 250, 0.25),
+    0 6px 12px rgba(14, 13, 13, 0.2) !important;
+    
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-green-contact:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
 }
