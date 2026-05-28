@@ -1,0 +1,4 @@
+- [ ] Identify why Experience layout is horizontal
+- [ ] Add page-specific CSS override for Experience container (flex-direction: column)
+- [ ] Verify page 5 title is above content
+- [ ] Remove/adjust spacing if needed
