@@ -599,6 +599,7 @@ body {
 }
 
 /* Link Teks Project */
+/* Link Teks Project */
 .project-link {
   font-size: 0.8rem;
   font-weight: 700;
@@ -608,14 +609,36 @@ body {
   line-height: 1.4;
   padding: 0 5px;
   transition: color 0.2s ease;
+  
+  /* KUNCI UTAMA: Wajib ditambahkan agar posisi garis ::after mengunci di bawah tulisan ini */
+  position: relative; 
+  display: inline-block; /* Memastikan elemen memiliki ruang lebar yang presisi sesuai teks */
+}
 
+.project-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  
+  /* Ganti ke warna biru atau pink agar kelihatan kontrasnya */
+  background-color: #f7bad8; 
+  
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.project-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .project-link:hover {
-  color: #f7bad8;
+  color: #f7bad8; /* Teks berubah pink lembut khas Kimo saat di-hover */
 }
-
-/* Tambahkan rule baru ini di CSS kamu */
 .page-auto {
   height: 80% !important;     /* Mematikan fungsi height 100vh bawaan */
   
@@ -687,29 +710,87 @@ body {
 
 /* page10 */
 .bgpage10-container {
-  background-image: url('image/page10.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('image/page10.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
-  /* Kunci posisi agar memenuhi satu halaman penuh tanpa celah */
   position: absolute;
   inset: 0; 
   width: 100%;
   height: 100%;
-  z-index: 0; /* Di belakang konten utama */
-
-  /* HAPUS SEMUA MARGIN MINUS DAN JEDA YANG BIKIN BOCOR */
+  z-index: 0;
   margin: 0 !important; 
 }
 
-/* Pastikan section pasangannya bersih dari luapan */
-.page {
-  height: 100vh;
-  width: 100%;
+/* Mengatur Konten Utama Berada di Lapisan Atas & Rata Kiri (Flexbox) */
+.page .main-konten {
   position: relative;
-  overflow: hidden; /* Mencegah gambar meluber ke halaman lain */
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Membuat konten menempel di kiri */
 }
+
+/* Kotak Pembungkus Teks Kiri */
+.content-left-p10 {
+  max-width: 500px; /* Membatasi lebar teks agar estetik */
+  color: #ffffff;   /* Warna teks putih agar kontras dengan background */
+}
+
+/* Teks Paragraf Rata Kanan-Kiri */
+.content-left-p10 p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  text-align: justify; /* KUNCI: Teks rata kanan-kiri */
+  margin-bottom: 25px;  /* Jarak antara paragraf dan link di bawahnya */
+}
+
+/* Baris Pembungkus Link Teks (Berjejer ke Samping) */
+.p10-links {
+  display: flex;
+  gap: 25px; /* Jarak spasi antar tulisan link */
+}
+
+/* Gaya Teks Link Murni (Minimalis) */
+.p10-link-btn {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none; /* Menghilangkan garis bawah bawaan browser */
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Animasi Garis Bawah Halus Saat Kursor Mendekat (Hover) */
+.p10-link-btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.p10-link-btn:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.p10-link-btn:hover {
+  color: #f7bad8; /* Teks berubah pink lembut khas Kimo saat di-hover */
+}
+
 
 /* CONTAINER UTAMA */
 #CONTACT-ME {
