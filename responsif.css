@@ -1,0 +1,416 @@
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width:768px){
+
+  html,
+  body{
+    overflow-x:hidden;
+  }
+
+  *{
+    box-sizing:border-box;
+    max-width:100%;
+  }
+
+  /* =========================================
+     GLOBAL
+  ========================================= */
+
+  .page{
+    height:auto !important;
+    min-height:auto !important;
+
+    padding:20px 0 !important;
+
+    overflow:hidden;
+  }
+
+  .main-konten,
+  .main-konten7,
+  .main-konten-kimo{
+    width:100%;
+    height:auto !important;
+
+    padding:20px 15px !important;
+  }
+
+  img{
+    max-width:100%;
+    height:auto;
+  }
+
+  /* =========================================
+     PAGE 1
+  ========================================= */
+
+  .portfolio-wrapper{
+    position:relative !important;
+
+    top:auto !important;
+    left:auto !important;
+
+    transform:none !important;
+
+    font-size:4rem !important;
+
+    text-align:center;
+
+    margin-top:20px;
+  }
+
+  .text-porto{
+    left:0 !important;
+  }
+
+  .foto1{
+    position:relative !important;
+
+    width:90% !important;
+    height:auto !important;
+
+    left:auto !important;
+    bottom:auto !important;
+
+    transform:none !important;
+
+    display:block;
+
+    margin:20px auto;
+  }
+
+  .badge-btn{
+    position:relative !important;
+
+    top:auto !important;
+    left:auto !important;
+    right:auto !important;
+    bottom:auto !important;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100% !important;
+    max-width:320px !important;
+
+    margin:12px auto !important;
+  }
+
+  /* =========================================
+   PAGE 2
+========================================= */
+
+.page2-title-container{
+  margin:20px 0 !important;
+  text-align:center;
+}
+
+.page2-text{
+  font-size:2.3rem !important;
+  line-height:1.1;
+}
+
+.page2-buttons{
+
+  display:flex !important;
+
+  flex-direction:column !important;
+
+  align-items:center !important;
+
+  justify-content:center !important;
+
+  gap:15px !important;
+
+  width:100% !important;
+
+  margin-top:30px !important;
+
+  padding:0 15px !important;
+
+  grid-template-columns:none !important;
+
+  grid-template-rows:none !important;
+
+  grid-auto-flow:unset !important;
+}
+
+.page2-buttons .badge-btn{
+
+  position:relative !important;
+
+  top:auto !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+
+  display:flex !important;
+
+  justify-content:center !important;
+  align-items:center !important;
+
+  width:100% !important;
+
+  max-width:280px !important;
+
+  height:48px !important;
+
+  padding:10px 15px !important;
+
+  margin:0 auto !important;
+
+  font-size:0.85rem !important;
+
+  text-align:center !important;
+}
+
+  /* =========================================
+     ABOUT
+  ========================================= */
+
+  .container-about{
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:20px 15px !important;
+  }
+
+  .foto-wrapper{
+    max-width:100% !important;
+    height:auto !important;
+  }
+
+  .foto2{
+    width:80% !important;
+  }
+
+  .info-wrapper{
+    width:100% !important;
+    height:auto !important;
+
+    padding:0 !important;
+  }
+
+  .page3-text{
+    font-size:3rem !important;
+
+    margin:20px 0 !important;
+
+    text-align:center;
+  }
+
+  .desc-text,
+  .edu-text{
+    font-size:0.9rem !important;
+  }
+
+  /* =========================================
+     SKILL
+  ========================================= */
+
+  .skill-container{
+    padding:20px 15px !important;
+  }
+
+  .skill-title-wrapper h1{
+    font-size:4rem !important;
+  }
+
+  .skill-word{
+    transform:none !important;
+  }
+
+  .skill-tools-bar{
+    display:flex;
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px !important;
+  }
+
+  .tool-logo{
+    max-width:70px !important;
+    max-height:70px !important;
+  }
+
+  /* =========================================
+     EXPERIENCE
+  ========================================= */
+
+  .experience-text{
+    display:flex;
+    flex-direction:column;
+
+    gap:20px !important;
+
+    padding:20px 15px !important;
+  }
+
+  /* =========================================
+     PAGE 6
+  ========================================= */
+
+  .page6-title-container{
+    width:100% !important;
+    height:auto !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+
+    gap:20px;
+
+    padding:20px 15px !important;
+  }
+
+  .header--left,
+  .header--right,
+  .header--center{
+    text-align:center !important;
+  }
+
+  .header--center h1{
+    font-size:2rem !important;
+  }
+
+  .page6-description{
+    width:100% !important;
+
+    padding:0 !important;
+
+    font-size:0.9rem !important;
+  }
+
+  /* =========================================
+     PROJECT
+  ========================================= */
+
+  .page7-title-container{
+    display:flex !important;
+    flex-direction:column !important;
+
+    gap:15px;
+
+    text-align:center;
+  }
+
+  .header-left,
+  .header-right{
+    text-align:center !important;
+    padding:0 !important;
+  }
+
+  .header-center h1{
+    font-size:1.6rem !important;
+  }
+
+  .project-grid{
+    display:flex !important;
+    flex-direction:column !important;
+
+    gap:30px !important;
+  }
+
+  /* =========================================
+     KIMO
+  ========================================= */
+
+  .kimo-image-wrapper img{
+    width:100% !important;
+    height:auto !important;
+  }
+
+  /* =========================================
+     PAGE 9
+  ========================================= */
+
+  .bgpage9{
+    height:35vh !important;
+
+    margin-top:0 !important;
+  }
+
+  /* =========================================
+     PAGE 10+
+  ========================================= */
+
+  .bgpage10-container,
+  .bgpage10-container1,
+  .bgpage10-container2,
+  .bgpage10-container3,
+  .bgpage10-container4,
+  .bgpage10-container5{
+
+    position:relative !important;
+
+    width:100% !important;
+
+    height:45vh !important;
+
+    background-size:cover !important;
+    background-position:center !important;
+
+    margin:0 !important;
+  }
+
+  .content-left-p10{
+    max-width:100% !important;
+  }
+
+  .content-left-p10 p{
+    font-size:0.95rem !important;
+  }
+
+  .p10-links{
+    display:flex;
+    flex-direction:column;
+
+    gap:15px !important;
+  }
+
+  /* =========================================
+     CONTACT
+  ========================================= */
+
+  .contact-wrapper{
+    display:flex;
+    flex-direction:column !important;
+
+    align-items:center;
+
+    text-align:center;
+  }
+
+  .contact-left,
+  .contact-right{
+    width:100% !important;
+    height:auto !important;
+  }
+
+  .foto-contact{
+    width:80% !important;
+
+    max-width:280px !important;
+
+    margin:0 auto !important;
+  }
+
+  .text-contact,
+  .text-me{
+    font-size:3rem !important;
+  }
+
+  .contact-buttons-grid{
+    justify-content:center;
+  }
+
+  .btn-green-contact{
+    width:100% !important;
+    max-width:320px !important;
+  }
+
+}
